@@ -20,11 +20,10 @@
 }
 
 .header__title {
-  padding: 25px 20px;
+  padding: 15px;
   margin: 0 auto;
   max-width: 1200px;
   font-weight: normal;
-  font-size: 2.2rem;
 }
 
 .nav {
@@ -35,7 +34,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -57,7 +56,7 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 200px 20px;
+  padding: 150px 20px;
 }
 
 .top-article {
@@ -70,12 +69,13 @@
 }
 
 .top-article__img-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 30px;
 }
 
 .readmore {
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .link--border {
@@ -115,12 +115,13 @@
 }
 
 .main-article__img-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .main-article__date-category {
   display: flex;
+  font-size: 0.9rem;
 }
 
 .main-article__link {
@@ -129,7 +130,6 @@
 
 .main-article__text {
   padding: 0 30px 30px;
-  font-size: 1.3rem;
   line-height: 140%;
 }
 
@@ -154,7 +154,7 @@
 }
 
 .profile__text {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .title {
@@ -166,10 +166,14 @@
   margin-bottom: 50px;
 }
 
+.ranking__text {
+  font-size: 0.9rem;
+}
+
 .archive__list-item {
   border-top: 1px solid;
-  padding: 30px;
-  font-size: 1.1rem;
+  padding: 20px;
+  font-size: 0.9rem;
 }
 
 .archive__list-item:last-child {
@@ -193,12 +197,12 @@
 }
 
 .footer-item__title {
-  margin-bottom: 40px;
-  font-size: 1.4rem;
+  margin-bottom: 30px;
 }
 
 .footer-item__text {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
 }
 
 .footer-item__list {
@@ -209,6 +213,7 @@
   padding-left: 15px;
   position: relative;
   margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 
 .footer-item__arrow::before {
@@ -225,20 +230,26 @@
 
 .footer-item__menu-list-item {
   padding-left: 15px;
+  font-size: 0.9rem;
 }
 
 .footer-item__menu-list-item--border {
   border-top: 1px solid;
-  padding: 20px;
+  padding: 15px;
 }
 
 .footer-item__menu-list-item:last-child {
   border-bottom: 1px solid;
 }
 
+.twitter__text {
+  font-size: 0.8rem;
+}
+
 .copyright {
   text-align: center;
   padding-bottom: 10px;
+  font-size: 0.7rem;
 }
 
 @media screen and (width <= 767px) {
