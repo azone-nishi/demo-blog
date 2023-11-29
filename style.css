@@ -79,6 +79,11 @@
   width: 32%;
 }
 
+.top-article__img {
+  height: 250px;
+  object-fit: cover;
+}
+
 .top-article__img-title {
   font-size: 1rem;
   margin-bottom: 30px;
@@ -139,6 +144,11 @@
   margin-right: 20px;
 }
 
+.main-article__img {
+  height: 430px;
+  object-fit: cover;
+}
+
 .main-article__text {
   padding: 0 30px 30px;
   line-height: 140%;
@@ -156,8 +166,10 @@
 }
 
 .profile__img {
-  width: 50%;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .sprofile__name {
@@ -183,6 +195,11 @@
   box-shadow: 0 15px 30px -5px #dcdcdc, 0 0 5px #dcdcdc;
   transform: translateY(-4px);
   border-radius: 10px;
+}
+
+.ranking__img {
+  height: 200px;
+  object-fit: cover;
 }
 
 .ranking__text {
@@ -299,13 +316,18 @@
     width: 100%;
   }
 
+  .main-article__img {
+    height: 300px;
+    object-fit: cover;
+  }
+
   .side-bar {
     width: 100%;
     padding: 0;
   }
 
-  .profile__img {
-    width: 20%;
+  .ranking__img {
+    height: 300px;
   }
 
   .footer-container {
