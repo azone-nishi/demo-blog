@@ -3,6 +3,17 @@
   color: black;
 }
 
+.link--hover {
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.link--hover:hover {
+  box-shadow: 0 15px 30px -5px #dcdcdc, 0 0 5px #dcdcdc;
+  transform: translateY(-4px);
+  border-radius: 10px;
+}
+
 .img {
   width: 100%;
 }
@@ -164,6 +175,14 @@
 
 .ranking__item {
   margin-bottom: 50px;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.ranking__item:hover {
+  box-shadow: 0 15px 30px -5px #dcdcdc, 0 0 5px #dcdcdc;
+  transform: translateY(-4px);
+  border-radius: 10px;
 }
 
 .ranking__text {
