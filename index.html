@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="世界各地の旅行体験を共有する旅行ブログサイトです。" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="image/favicon.ico" />
@@ -12,9 +13,11 @@
   <body>
     <header class="header">
       <h1 class="header__title"><a href="#" class="link">Travel Blog</a></h1>
-      <nav class="nav">
+      <nav class="nav" aria-label="メインナビゲーション">
         <ul class="list nav__list">
-          <li class="nav__list-item"><a href="#" class="link link--hover nav__list-link">NEW</a></li>
+          <li class="nav__list-item">
+            <a href="#" class="link link--hover nav__list-link" aria-current="page">NEW</a>
+          </li>
           <li class="nav__list-item"><a href="#" class="link link--hover nav__list-link">COLUMN</a></li>
           <li class="nav__list-item"><a href="#" class="link link--hover nav__list-link">SERIES</a></li>
           <li class="nav__list-item"><a href="#" class="link link--hover nav__list-link">Q&A</a></li>
@@ -22,8 +25,9 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <section class="top-article">
+    <main class="container" role="main">
+      <section class="top-article" aria-labelledby="top-article-heading">
+        <h2 id="top-article-heading" class="visually-hidden">ピックアップ記事</h2>
         <article class="top-article__item">
           <img src="image/pickup1.jpg" alt="pacture1" class="img top-article__img" />
           <h2 class="top-article__img-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
@@ -41,13 +45,14 @@
         </article>
       </section>
       <div class="main-content">
-        <section class="main-article">
+        <section class="main-article" aria-labelledby="main-article-heading">
+          <h2 id="main-article-heading" class="visually-hidden">最新記事</h2>
           <article class="main-article__item">
             <h2 class="main-article__img-title">
               <a href="#" class="link">タイトルテキストテキストテキストテキストテキスト</a>
             </h2>
             <div class="main-article__date-category">
-              <a href="#" class="link main-article__link"><p>2020/01/01</p></a>
+              <a href="#" class="link main-article__link"><time datetime="2020-01-01">2020/01/01</time></a>
               <a href="#" class="link"><p>カテゴリ1</p></a>
             </div>
             <a href="#"><img src="image/main1.jpg" alt="main1" class="img main-article__img" /></a>
@@ -63,7 +68,7 @@
               <a href="#" class="link">タイトルテキストテキストテキストテキストテキスト</a>
             </h2>
             <div class="main-article__date-category">
-              <a href="#" class="link main-article__link"><p>2020/01/01</p></a>
+              <a href="#" class="link main-article__link"><time datetime="2020-01-01">2020/01/01</time>
               <a href="#" class="link"><p>カテゴリ1</p></a>
             </div>
             <a href="#"><img src="image/main2.jpg" alt="main2" class="img main-article__img" /></a>
@@ -79,7 +84,7 @@
               <a href="#" class="link">タイトルテキストテキストテキストテキストテキスト</a>
             </h2>
             <div class="main-article__date-category">
-              <a href="#" class="link main-article__link"><p>2020/01/01</p></a>
+              <a href="#" class="link main-article__link"><time datetime="2020-01-01">2020/01/01</time>
               <a href="#" class="link"><p>カテゴリ1</p></a>
             </div>
             <a href="#"><img src="image/main3.jpg" alt="main3" class="img main-article__img" /></a>
@@ -92,38 +97,40 @@
           </article>
         </section>
         <aside class="side-bar">
-          <section class="profile">
+          <section class="profile" aria-labelledby="profile-heading">
             <img src="image/author.jpg" alt="pacture1" class="img profile__img" />
-            <h2 class="profile__name">Name Name</h2>
+            <h2 id="profile-heading" class="profile__name">Name Name</h2>
             <p class="profile__text">
               プロフィールテキストテキストテキストテキストテキストテキストテキスト
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </section>
-          <section class="ranking">
-            <h2 class="title">Ranking</h2>
-            <div class="ranking__item">
-              <a href="#" class="link">
-                <img src="image/ranking1.jpg" alt="pacture1" class="img ranking__img" />
-                <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </div>
-            <div class="ranking__item">
-              <a href="#" class="link">
-                <img src="image/ranking2.jpg" alt="pacture1" class="img ranking__img" />
-                <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </div>
-            <div class="ranking__item">
-              <a href="#" class="link">
-                <img src="image/ranking3.jpg" alt="pacture1" class="img ranking__img" />
-                <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </div>
+          <section class="ranking" aria-labelledby="ranking-heading">
+            <h2 id="ranking-heading" class="title">Ranking</h2>
+            <ol class="list ranking__list">
+              <li class="ranking__item" aria-posinset="1" aria-setsize="3">
+                <a href="#" class="link">
+                  <img src="image/ranking1.jpg" alt="pacture1" class="img ranking__img" />
+                  <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
+                </a>
+              </li>
+              <li class="ranking__item" aria-posinset="2" aria-setsize="3">
+                <a href="#" class="link">
+                  <img src="image/ranking2.jpg" alt="pacture1" class="img ranking__img" />
+                  <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
+                </a>
+              </li>
+              <li class="ranking__item" aria-posinset="3" aria-setsize="3">
+                <a href="#" class="link">
+                  <img src="image/ranking3.jpg" alt="pacture1" class="img ranking__img" />
+                  <p class="ranking__text">タイトルテキストテキストテキストテキストテキストテキスト</p>
+                </a>
+              </li>
+            </ol>
           </section>
-          <section class="archive">
-            <h2 class="title">Archive</h2>
+          <section class="archive" aria-labelledby="archive-heading">
+            <h2 id="archive-heading" class="title">Archive</h2>
             <ul class="list">
               <li class="archive__list-item"><a href="#" class="link link--hover">XXXX年XX月(XX)</a></li>
               <li class="archive__list-item"><a href="#" class="link link--hover">XXXX年XX月(XX)</a></li>
@@ -146,51 +153,55 @@
       </div>
     </main>
     <footer class="footer">
-      <section class="footer-container">
-        <div class="footer-item">
-          <h2 class="footer-item__title">About</h2>
+      <div class="footer-container">
+        <section class="footer-item" aria-labelledby="about-heading">
+          <h2 id="about-heading" class="footer-item__title">About</h2>
           <p class="footer-item__text">
             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
-          <ul class="list footer-item__list">
-            <li class="footer-item__list-item">
-              <a href="#" class="link link--hover footer-item__arrow">プロフィール詳細</a>
-            </li>
-            <li class="footer-item__list-item">
-              <a href="#" class="link link--hover footer-item__arrow">お仕事の依頼</a>
-            </li>
-            <li class="footer-item__list-item">
-              <a href="#" class="link link--hover footer-item__arrow">お問い合わせ</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-item">
-          <h2 class="footer-item__title">Menu</h2>
-          <ul class="list footer-item__list">
-            <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
-              <a href="#" class="link link--hover">NEW</a>
-            </li>
-            <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
-              <a href="#" class="link link--hover">CATEGORY</a>
-            </li>
-            <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
-              <a href="#" class="link link--hover">COLUMN</a>
-            </li>
-            <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
-              <a href="#" class="link link--hover">SERIES</a>
-            </li>
-            <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
-              <a href="#" class="link link--hover">Q&A</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-item">
-          <h2 class="footer-item__title">Twitter</h2>
+          <nav aria-label="About navigation">
+            <ul class="list footer-item__list">
+              <li class="footer-item__list-item">
+                <a href="#" class="link link--hover footer-item__arrow">プロフィール詳細</a>
+              </li>
+              <li class="footer-item__list-item">
+                <a href="#" class="link link--hover footer-item__arrow">お仕事の依頼</a>
+              </li>
+              <li class="footer-item__list-item">
+                <a href="#" class="link link--hover footer-item__arrow">お問い合わせ</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="footer-item" aria-labelledby="menu-heading">
+          <h2 id="menu-heading" class="footer-item__title">Menu</h2>
+          <nav aria-label="Footer navigation">
+            <ul class="list footer-item__list">
+              <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
+                <a href="#" class="link link--hover">NEW</a>
+              </li>
+              <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
+                <a href="#" class="link link--hover">CATEGORY</a>
+              </li>
+              <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
+                <a href="#" class="link link--hover">COLUMN</a>
+              </li>
+              <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
+                <a href="#" class="link link--hover">SERIES</a>
+              </li>
+              <li class="footer-item__menu-list-item footer-item__menu-list-item--border">
+                <a href="#" class="link link--hover">Q&A</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="footer-item" aria-labelledby="twitter-heading">
+          <h2 id="twitter-heading" class="footer-item__title">Twitter</h2>
           <a href="#" class="link twitter__text">Tweets by TwitterJP</a>
-        </div>
-      </section>
+        </section>
+      </div>
       <small class="copyright">© Travel & Blog</small>
     </footer>
   </body>
